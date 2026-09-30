@@ -23,3 +23,4 @@ SELECT * FROM escola;
 
  INSERT INTO escola (nome_instituicao,cnpj,email_contato) VALUES ('consolata', '123.456.789', 'escola.consolata@gmail.com');
 
+ INSERt INTO escola (nome_instituicao,cnpj,email_contato) VALUES ('francisco_lima', '25050707','franciscolima@pr.gov.br');
