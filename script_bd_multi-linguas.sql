@@ -23,6 +23,8 @@ SELECT * FROM escola;
 
  INSERT INTO escola (nome_instituicao,cnpj,email_contato) VALUES ('consolata', '123.456.789', 'escola.consolata@gmail.com');
 
- INSERt INTO escola (nome_instituicao,cnpj,email_contato) VALUES ('francisco_lima', '25050707','franciscolima@pr.gov.br');
+ INSERT INTO escola (nome_instituicao,cnpj,email_contato) VALUES ('francisco_lima', '250.050.707','franciscolima@pr.gov.br');
 
-INSERt INTO escola (nome_instituicao,cnpj,email_contato) VALUES ('Colegio_adventista', '.123.432.567','Colegio_adventista@pr.gov.br');
+ INSERT INTO escola (nome_instituicao,cnpj,email_contato) VALUES ('Colegio_adventista', '.123.432.567','Colegio_adventista@pr.gov.br');
+
+ INSERT INTO escola (nome_instituicao,cnpj,email_contato) VALUES ('schuster', '213.243.098','schuster@pr.gov.br');
