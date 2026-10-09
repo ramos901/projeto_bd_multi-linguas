@@ -30,3 +30,13 @@ SELECT * FROM escola;
 
 
  DELETE FROM escola where id_escola = 1;
+
+
+ CREATE TABLE mensagem_chat(
+id_mensagem SERIAL PRIMARY KEY,
+id_sala int not null,
+id_emissor     int not null,
+texto_original texto not null,
+data_cadastro   timestamp
+);
+
