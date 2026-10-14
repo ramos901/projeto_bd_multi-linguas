@@ -36,7 +36,10 @@ SELECT * FROM escola;
 id_mensagem SERIAL PRIMARY KEY,
 id_sala int not null,
 id_emissor     int not null,
-texto_original texto not null,
-data_cadastro   timestamp
+texto_original varchar(255) not null,
+texto_traduzido   timestamp,
+idioma_origem varchar(10) not null,
+idioma_destino varchar (10) not null,
+comtem_conteudo_inapropriado boolean,
+data_envio timestamp
 );
-
