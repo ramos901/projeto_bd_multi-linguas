@@ -46,3 +46,7 @@ data_envio timestamp
 
 
 SELECT * FROM  mensagem_chat;
+
+
+ INSERT INTO mensagem_chat (id_sala,id_emissor ,texto_original ,texto_traduzido, idioma_origem, idioma_destino, comtem_conteudo_inapropriado, data_envio)
+  VALUES ('', '123.456.789', 'escola.consolata@gmail.com', ',03/12/32');
