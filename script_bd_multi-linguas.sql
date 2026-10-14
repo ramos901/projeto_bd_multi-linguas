@@ -43,3 +43,6 @@ idioma_destino varchar (10) not null,
 comtem_conteudo_inapropriado boolean,
 data_envio timestamp
 );
+
+
+SELECT * FROM  mensagem_chat;
