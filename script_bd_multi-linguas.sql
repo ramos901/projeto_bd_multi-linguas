@@ -50,3 +50,25 @@ SELECT * FROM  mensagem_chat;
 
  INSERT INTO mensagem_chat (id_sala,id_emissor ,texto_original ,texto_traduzido, idioma_origem, idioma_destino, comtem_conteudo_inapropriado, data_envio)
   VALUES ('', '123.456.789', 'escola.consolata@gmail.com', ',03/12/32');
+
+
+
+
+
+CREATE TABLE recomendacao_vocabulario(
+  id_recomendacao SERIAL PRIMARY KEY,
+  id_usuario int NOT NULL,
+  palavra_expressao varchar(100) NOT NULL,
+  traducao varchar(100) NOT NULL,
+  frequencia_uso int,
+  sugeriada_por_nlp boolean,
+  data_ultima_ocorrencia timestamp
+
+);
+SELECT * FROM recomendacao_vocabulario;
+
+INSERT INTO recomendacao_vocabulario(id_usuario, palavra_expressao, traducao) values ('2','TEXTO','MAIS TEXTO');
+
+INSERT INTO recomendacao_vocabulario(id_usuario, palavra_expressao, traducao) values ('3','hello','significa ola');
+
+INSERT INTO recomendacao_vocabulario(id_usuario, palavra_expressao, traducao) values ('4','yes','significa sim');
