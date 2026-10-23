@@ -1,4 +1,5 @@
 
+
 CREATE TABLE escola(
   id_escola SERIAL PRIMARY KEY,
   nome_instituicao varchar(150) not null,
@@ -18,7 +19,6 @@ INSERT INTO escola (nome_instituicao, cnpj, email_contato) VALUES ('consolata', 
 
 
 
-
 CREATE TABLE recomendacao_vocabulario(
   id_recomendacao SERIAL PRIMARY KEY,
   fk_usuario int NOT NULL,
@@ -35,7 +35,7 @@ INSERT INTO recomendacao_vocabulario(fk_usuario, palavra_expressao, traducao) va
 
 INSERT INTO recomendacao_vocabulario(fk_usuario, palavra_expressao, traducao) values (3,'TEXTO','MAIS TEXTO');
 
-INSERT INTO recomendacao_vocabulario(fk_usuario, palavra_expressao, traducao) values (1,'TEXTO','MAIS TEXTO');
+INSERT INTO recomendacao_vocabulario(fk_usuario, palavra_expressao, traducao) values (4,'TEXTO','MAIS TEXTO');
 
 CREATE TABLE usuario (
   id_usuario SERIAL PRIMARY KEY,
@@ -59,6 +59,8 @@ INSERT INTO usuario (nome, email, senha_hash, data_nascimento, faixa_etaria, tip
 
 INSERT INTO usuario (nome, email, senha_hash, data_nascimento, faixa_etaria, tipo_perfil, fk_turma, data_cadastro) values ('jati', 'jati@gmail.com', '14', '2011/05/14', '15', 'es',2, '2026/01/01');
 
+drop table usuario
+
 CREATE TABLE turma (
   id_turma SERIAL PRIMARY KEY,
   fk_escola    int          NOT NULL,
@@ -74,6 +76,7 @@ INSERT INTO turma(fk_escola, nome_turma, ano_letivo) VALUES (2,'escola','1234567
 
 INSERT INTO turma(fk_escola, nome_turma, ano_letivo) VALUES (2,'escola','181234');
 
+
 CREATE TABLE reporte_falha_traducao (
   id_reporte SERIAL PRIMARY KEY,
   fk_usuario         int  NOT NULL,
@@ -87,11 +90,12 @@ CREATE TABLE reporte_falha_traducao (
 
 SELECT * FROM reporte_falha_traducao;
 
-INSERT INTO reporte_falha_traducao(fk_usuario, texto_original, traducao_incorreta) VALUES (1,'textoo','mais textoo')
+INSERT INTO reporte_falha_traducao(fk_usuario, texto_original, traducao_incorreta) VALUES (3,'textoo','mais texto')
 
-INSERT INTO reporte_falha_traducao(fk_usuario, texto_original, traducao_incorreta) VALUES (1,'asdfghj','sdfghjkl')
+INSERT INTO reporte_falha_traducao(fk_usuario, texto_original, traducao_incorreta) VALUES (2,'asdfghj','sdfghjkl')
 
-INSERT INTO reporte_falha_traducao(fk_usuario, texto_original, traducao_incorreta) VALUES (1,'texo','ms texo')
+INSERT INTO reporte_falha_traducao(fk_usuario, texto_original, traducao_incorreta) VALUES (2,'texo','ms texo')
+
 
 CREATE TABLE perfil_estudante (
   id_perfil SERIAL PRIMARY KEY,
@@ -106,11 +110,9 @@ CREATE TABLE perfil_estudante (
 
 SELECT * FROM perfil_estudante;
 
-INSERT INTO perfil_estudante (fk_usuario, idioma_nativo, idioma_estudo) values (1, 'formal', 'academico') ;
+INSERT INTO perfil_estudante (fk_usuario, idioma_nativo, idioma_estudo) values (4, 'formal', 'academico') ;
 
 INSERT INTO perfil_estudante (fk_usuario, idioma_nativo, idioma_estudo) values (2, 'formal', 'academico') ;
 
 INSERT INTO perfil_estudante (fk_usuario, idioma_nativo, idioma_estudo) values (3, 'formal', 'academico') ;
-
-
 
