@@ -1,15 +1,4 @@
-CREATE tABLE professor(
- id_professor SERIAL PRIMARY KEY ,
- nome varchar (255) ,
- email varchar (255) ,
- cpf varchar (15)
-);
 
-
-SELECT * FROM professor;
-
-
-INSERT INTO professor (nome, email, cpf) VALUES ('Jatniel','jatniel@gmael', '123456789')
 CREATE TABLE escola(
 id_escola SERIAL PRIMARY KEY,
 nome_instituicao varchar(150)not null,
@@ -31,27 +20,7 @@ SELECT * FROM escola;
 
  DELETE FROM escola where id_escola = 1;
 
-
- CREATE TABLE mensagem_chat(
-id_mensagem SERIAL PRIMARY KEY,
-id_sala int not null,
-id_emissor     int not null,
-texto_original varchar(255) not null,
-texto_traduzido   timestamp,
-idioma_origem varchar(10) not null,
-idioma_destino varchar (10) not null,
-comtem_conteudo_inapropriado boolean,
-data_envio timestamp
-);
-
-
-SELECT * FROM  mensagem_chat;
-
-
- INSERT INTO mensagem_chat (id_sala,id_emissor ,texto_original ,texto_traduzido, idioma_origem, idioma_destino, comtem_conteudo_inapropriado, data_envio)
-  VALUES ('', '123.456.789', 'escola.consolata@gmail.com', ',03/12/32');
-
-
+=
 
 
 
@@ -74,16 +43,3 @@ INSERT INTO recomendacao_vocabulario(id_usuario, palavra_expressao, traducao) va
 INSERT INTO recomendacao_vocabulario(id_usuario, palavra_expressao, traducao) values ('4','yes','significa sim');
 
 
-CREATE TABLE perfil_estudante (
-  id_perfil SERIAL PRIMARY KEY ,
-  id_usuario INT NOT NULL ,
-  idioma_nativo VARCHAR (10) NOT NULL ,
-  idioma_estudo VARCHAR (10) NOT NULL ,
-  estilo_vocabulario varchar (255) ,
-  modulos_concluidos_acumulados INT ,
-  nivel_fluencia_atual VARCHAR (20)
-);
-
-SELECT * FROM perfil_estudante
-
-INSERT INTO perfil_estudante (id_perfil) values ('casual', 'formal', 'academico') ;
