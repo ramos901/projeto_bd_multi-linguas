@@ -74,3 +74,23 @@ INSERT INTO turma(fk_escola, nome_turma, ano_letivo) VALUES (2,'escola','1234567
 
 INSERT INTO turma(fk_escola, nome_turma, ano_letivo) VALUES (2,'escola','181234');
 
+CREATE TABLE reporte_falha_traducao (
+  id_reporte SERIAL PRIMARY KEY,
+  fk_usuario         int  NOT NULL,
+  texto_original     text NOT NULL,
+  traducao_incorreta text NOT NULL,
+  carrecao_sugerida  text,
+  data_reporte       timestamp,
+  constraint fk_usuario foreign key (fk_usuario)references usuario (id_usuario)
+
+);
+
+SELECT * FROM reporte_falha_traducao;
+
+INSERT INTO reporte_falha_traducao(fk_usuario, texto_original, traducao_incorreta) VALUES (1,'textoo','mais textoo')
+
+INSERT INTO reporte_falha_traducao(fk_usuario, texto_original, traducao_incorreta) VALUES (1,'asdfghj','sdfghjkl')
+
+INSERT INTO reporte_falha_traducao(fk_usuario, texto_original, traducao_incorreta) VALUES (1,'texo','ms texo')
+
+
