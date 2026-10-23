@@ -93,4 +93,24 @@ INSERT INTO reporte_falha_traducao(fk_usuario, texto_original, traducao_incorret
 
 INSERT INTO reporte_falha_traducao(fk_usuario, texto_original, traducao_incorreta) VALUES (1,'texo','ms texo')
 
+CREATE TABLE perfil_estudante (
+  id_perfil SERIAL PRIMARY KEY,
+  fk_usuario INT NOT NULL,
+  idioma_nativo VARCHAR (10) NOT NULL,
+  idioma_estudo VARCHAR (10) NOT NULL,
+  estilo_vocabulario varchar (255),
+  modulos_concluidos_acumulados INT,
+  nivel_fluencia_atual VARCHAR (20),
+  constraint fk_usuario foreign key (fk_usuario)references usuario (id_usuario)
+);
+
+SELECT * FROM perfil_estudante;
+
+INSERT INTO perfil_estudante (fk_usuario, idioma_nativo, idioma_estudo) values (1, 'formal', 'academico') ;
+
+INSERT INTO perfil_estudante (fk_usuario, idioma_nativo, idioma_estudo) values (2, 'formal', 'academico') ;
+
+INSERT INTO perfil_estudante (fk_usuario, idioma_nativo, idioma_estudo) values (3, 'formal', 'academico') ;
+
+
 
